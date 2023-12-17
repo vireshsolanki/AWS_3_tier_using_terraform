@@ -8,7 +8,7 @@ resource "aws_lb" "alb-internet" {
     internal = true
     load_balancer_type = "application"
     security_groups = [var.alb-internet-sg-id]
-    subnets = [var.public-1-1a-id, var.public-1-1a-id]
+    subnets = [var.public-1-1a-id, var.public-2-1b-id]
     enable_deletion_protection = false
     tags = {
       Name = "${var.project-name}-internal-alb"
